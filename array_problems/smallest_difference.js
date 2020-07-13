@@ -15,7 +15,7 @@
 // sort the arrays
 // Read the data(loop)
 // I need to get the absolute difference
-// Compare that difference with all the other differences
+// Keep track of the smaller difference
 // If so the push the values to the array
 
 function smallestDifference(arrayOne, arrayTwo) {
