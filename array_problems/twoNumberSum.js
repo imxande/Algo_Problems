@@ -8,34 +8,50 @@
     Ex: input => const targetSum = 10
 */
 
-// O(n^2) time complexity
+// // O(n^2) time complexity, O(n) space complecity
+// const twoSum = (array, target) => {
+//   // placeholder for our result
+//   const result = [];
+
+//   //  outer loop to get first number
+//   for (let i = 0; i < array.length; i++) {
+//     //   grab first number
+//     const firstNumber = array[i];
+
+//     // inner loop to grab second number and get the current sum
+//     for (let j = i + 1; j < array.length; j++) {
+//       // grab second number
+//       const secondNumber = array[j];
+
+//       //   get current sum
+//       const currentSum = firstNumber + secondNumber;
+
+//       //   check if the current sum is equal to the target
+//       if (currentSum === target) {
+//         //   if so populate our result array
+//         result.push(firstNumber, secondNumber);
+//       }
+//     }
+//   }
+
+//   // return result whether empty or populated
+//   return result;
+// };
+
+// O(n) time complexity, O(n) space complecity
 const twoSum = (array, target) => {
-  // placeholder for our result
-  const result = [];
+  let result = {};
 
-  //  outer loop to get first number
-  for (let i = 0; i < array.length; i++) {
-    //   grab first number
-    const firstNumber = array[i];
+  for (const number of array) {
+    const difference = target - number;
 
-    // inner loop to grab second number and get the current sum
-    for (let j = i + 1; j < array.length; j++) {
-      // grab second number
-      const secondNumber = array[j];
-
-      //   get current sum
-      const currentSum = firstNumber + secondNumber;
-
-      //   check if the current sum is equal to the target
-      if (currentSum === target) {
-        //   if so populate our result array
-        result.push(firstNumber, secondNumber);
-      }
+    if (difference in result) {
+      return [number, difference];
+    } else {
+      result[number] = true;
     }
   }
-
-  // return result whether empty or populated
-  return result;
+  return [];
 };
 
 // hold the returned values from calling the function twoSum
