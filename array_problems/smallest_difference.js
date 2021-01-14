@@ -1,5 +1,5 @@
 /*
- Write a function that takes in two non-empty arrays of integerst. find the pair of numbers(one each array) whose absolute difference is closest to zero
+ Write a function that takes in two non-empty arrays of integers. find the pair of numbers(one each array) whose absolute difference is closest to zero
     and returns an array containing these two numbers, with the number from the first array in the first position. 
 
     You can assume that there will only be a pair of numbers with the smallest difference. 
@@ -60,7 +60,7 @@ function smallestDifference(arrayOne, arrayTwo) {
     if (smallest > current) {
       // if so then smallest is now the current
       smallest = current;
-      // those the smallest pair are populater with the first and second number
+      // those the smallest pair are populated with the first and second number
       smallestPair = [firstNum, secondNum];
     }
   }
