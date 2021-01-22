@@ -29,7 +29,7 @@ const validateSeq = (array, sequence) => {
   let seqIdx = 0;
 
   // As long as we are within boundaries of the array and the sequence, perform operations
-  while (array[arrIdx] < array.length && sequence[seqIdx] < sequence.length) {
+  while (arrIdx < array.length && seqIdx < sequence.length) {
     // check if first number of sequence is the same as first number in the original array
     if (array[arrIdx] === sequence[seqIdx]) {
       // move the sequence index
@@ -45,3 +45,6 @@ const validateSeq = (array, sequence) => {
 // Input
 const array = [5, 1, 22, 25, 6, -1, 8, 10];
 const sequence = [1, 6, -1, 10];
+
+// Sanity check
+console.log(validateSeq(array, sequence));
