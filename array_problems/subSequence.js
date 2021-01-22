@@ -22,7 +22,7 @@ Sample Output: true
     5- Return true if we hit the end of the sequence
 */
 
-// Function
+// Solution
 const validateSeq = (array, sequence) => {
   // Init pointer to track position
   let arrIdx = 0;
@@ -48,3 +48,5 @@ const sequence = [1, 6, -1, 10];
 
 // Sanity check
 console.log(validateSeq(array, sequence));
+
+// Time Complexity: O(n)
