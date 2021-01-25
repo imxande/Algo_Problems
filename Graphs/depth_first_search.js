@@ -8,3 +8,24 @@ Implement the depthFirstSearch method on the Node class, which takes in an empty
 the DepthFirstSearch approach, stores all the nodes' names in the input array, and returns it.
 
 */
+
+class Node {
+  constructor(name) {
+    this.name = name;
+    this.children = [];
+  }
+
+  // add a child method
+  addChild(name) {
+    this.children.push(new Node(name));
+    return this;
+  }
+
+  depthFirstSearch(array) {
+    array.push(this.name);
+    for (const child of this.children) {
+      child.depthFirstSearch(array);
+    }
+    return array;
+  }
+}
