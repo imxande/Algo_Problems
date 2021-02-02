@@ -1,4 +1,4 @@
-// Create a folder that contains a folder for each letter of the alphabet.
+// Create a data folder that contains a folder for each letter of the alphabet.
 
 // Import file system
 const fs = require("fs");
